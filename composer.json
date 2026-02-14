@@ -1,23 +1,31 @@
 {
-    "name": "divineomega/baby-tracker-data-parser",
-    "description": "PHP parser for data exported from the Baby Tracker Android app by Amila",
-    "type": "library",
-    "license": "LGPL-3.0-only",
-    "authors": [
-        {
-            "name": "Jordan Hall",
-            "email": "jordan@hall05.co.uk"
-        }
-    ],
-    "require": {
-        "php": ">=7.0",
-        "divineomega/uxdm": "^2.6",
-        "nesbot/carbon": "^1.26.3",
-        "illuminate/support": "^5.1"
-    },
-    "autoload": {
-        "psr-4": {
-            "DivineOmega\\BabyTrackerDataParser\\": "src/"
-        }
+  "name": "jord-jd/baby-tracker-data-parser",
+  "description": "PHP parser for data exported from the Baby Tracker Android app by Amila",
+  "type": "library",
+  "license": "LGPL-3.0-only",
+  "authors": [
+    {
+      "name": "Jordan Hall",
+      "email": "jordan@hall05.co.uk"
     }
+  ],
+  "require": {
+    "php": ">=7.0",
+    "divineomega/uxdm": "^2.6",
+    "nesbot/carbon": "^1.26.3",
+    "illuminate/support": "^5.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "DivineOmega\\BabyTrackerDataParser\\": "src/"
+    }
+  },
+  "replace": {
+    "jord-jd/baby-tracker-data-parser": "self.version"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  }
 }
