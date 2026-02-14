@@ -21,7 +21,7 @@
     }
   },
   "replace": {
-    "jord-jd/baby-tracker-data-parser": "self.version"
+    "divineomega/baby-tracker-data-parser": "self.version"
   },
   "extra": {
     "branch-alias": {
