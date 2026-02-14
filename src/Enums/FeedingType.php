@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser\Enums;
+namespace JordJD\BabyTrackerDataParser\Enums;
 
 class FeedingType
 {

@@ -11,13 +11,13 @@
   ],
   "require": {
     "php": ">=7.0",
-    "divineomega/uxdm": "^2.6",
+    "jord-jd/uxdm": "^6.0",
     "nesbot/carbon": "^1.26.3",
     "illuminate/support": "^5.1"
   },
   "autoload": {
     "psr-4": {
-      "DivineOmega\\BabyTrackerDataParser\\": "src/"
+      "JordJD\\BabyTrackerDataParser\\": "src/"
     }
   },
   "replace": {
@@ -25,7 +25,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "2.0-dev"
+      "dev-master": "3.0-dev"
     }
   }
 }

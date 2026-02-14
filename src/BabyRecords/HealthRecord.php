@@ -1,8 +1,8 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser\BabyRecords;
+namespace JordJD\BabyTrackerDataParser\BabyRecords;
 
-use DivineOmega\BabyTrackerDataParser\Enums\HealthType;
+use JordJD\BabyTrackerDataParser\Enums\HealthType;
 
 class HealthRecord extends BaseRecord
 {

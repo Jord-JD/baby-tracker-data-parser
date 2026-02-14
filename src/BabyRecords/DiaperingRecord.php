@@ -1,9 +1,9 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser\BabyRecords;
+namespace JordJD\BabyTrackerDataParser\BabyRecords;
 
 
-use DivineOmega\BabyTrackerDataParser\Enums\DiaperingType;
+use JordJD\BabyTrackerDataParser\Enums\DiaperingType;
 
 class DiaperingRecord extends BaseRecord
 {

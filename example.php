@@ -2,7 +2,7 @@
 
 require_once __DIR__.'/vendor/autoload.php';
 
-$parser = new DivineOmega\BabyTrackerDataParser\Parser(getenv('PATH_TO_ZIP_FILE'));
+$parser = new JordJD\BabyTrackerDataParser\Parser(getenv('PATH_TO_ZIP_FILE'));
 
 $records = $parser->parseBabyRecords();
 

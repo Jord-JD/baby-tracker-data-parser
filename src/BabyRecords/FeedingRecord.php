@@ -1,10 +1,10 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser\BabyRecords;
+namespace JordJD\BabyTrackerDataParser\BabyRecords;
 
 
-use DivineOmega\BabyTrackerDataParser\Enums\Breast;
-use DivineOmega\BabyTrackerDataParser\Enums\FeedingType;
+use JordJD\BabyTrackerDataParser\Enums\Breast;
+use JordJD\BabyTrackerDataParser\Enums\FeedingType;
 
 class FeedingRecord extends BaseRecord
 {

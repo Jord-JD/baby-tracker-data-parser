@@ -1,6 +1,6 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser\BabyRecords;
+namespace JordJD\BabyTrackerDataParser\BabyRecords;
 
 
 use Carbon\Carbon;

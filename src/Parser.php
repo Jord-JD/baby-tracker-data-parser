@@ -1,11 +1,11 @@
 <?php
 
-namespace DivineOmega\BabyTrackerDataParser;
+namespace JordJD\BabyTrackerDataParser;
 
-use DivineOmega\BabyTrackerDataParser\BabyRecords\BaseRecord;
-use DivineOmega\uxdm\Objects\Destinations\AssociativeArrayDestination;
-use DivineOmega\uxdm\Objects\Migrator;
-use DivineOmega\uxdm\Objects\Sources\CSVSource;
+use JordJD\BabyTrackerDataParser\BabyRecords\BaseRecord;
+use JordJD\uxdm\Objects\Destinations\AssociativeArrayDestination;
+use JordJD\uxdm\Objects\Migrator;
+use JordJD\uxdm\Objects\Sources\CSVSource;
 use Illuminate\Support\Collection;
 
 class Parser
@@ -40,7 +40,7 @@ class Parser
         $collection = new Collection();
 
         foreach($rows as $row) {
-            $className = 'DivineOmega\\BabyTrackerDataParser\\BabyRecords\\'.$row['RecordCategory'].'Record';
+            $className = 'JordJD\\BabyTrackerDataParser\\BabyRecords\\'.$row['RecordCategory'].'Record';
             if (!class_exists($className)) {
                 throw new \Exception('Unexpected record type found: '.$row['RecordCategory']);
             }
