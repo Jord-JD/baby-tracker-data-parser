@@ -27,7 +27,7 @@ class BaseRecord
         $this->startDate = new Carbon($data['StartDate']);
         $this->finishDate = new Carbon($data['FinishDate']);
         $this->details = isset($data['Details']) ? $data['Details'] : null;
-        $this->duration = $this->startDate->diffInMinutes($this->finishDate);
+        $this->duration = (int) $this->startDate->diffInMinutes($this->finishDate);
     }
 
     /**

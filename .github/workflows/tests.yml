@@ -13,9 +13,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - php: '7.0'
+          - php: '7.1'
             composer: '2.2'
-            phpunit: '^6.5'
+            phpunit: '^7.5'
             illuminate: '^5.1'
           - php: '8.5'
             composer: latest
