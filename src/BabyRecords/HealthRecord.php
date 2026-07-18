@@ -12,7 +12,7 @@ class HealthRecord extends BaseRecord
     {
         parent::__construct($data);
 
-        $subcategory = $this->getRecordSubCategory();
+        $subcategory = (string) $this->getRecordSubCategory();
 
         if (str_contains($subcategory, 'Medication')) {
 
