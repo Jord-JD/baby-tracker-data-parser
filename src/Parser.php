@@ -14,13 +14,25 @@ class Parser
 
     public function __construct(string $pathToZipFile)
     {
-        if (!$pathToZipFile) {
+        if ($pathToZipFile === '') {
             throw new \InvalidArgumentException('Path to zip file not specified.');
         }
 
-        if (!file_exists($pathToZipFile)) {
+        if (!is_file($pathToZipFile) || !is_readable($pathToZipFile)) {
             throw new \InvalidArgumentException('Zip file not found.');
         }
+
+        $archive = new \ZipArchive();
+        $opened = $archive->open($pathToZipFile);
+        if ($opened !== true) {
+            throw new \InvalidArgumentException('Unable to open Baby Tracker zip file.');
+        }
+
+        if ($archive->locateName('BabyRecords.csv') === false) {
+            $archive->close();
+            throw new \InvalidArgumentException('BabyRecords.csv was not found in the Baby Tracker export.');
+        }
+        $archive->close();
 
         $this->pathToZipFile = $pathToZipFile;
     }
@@ -39,10 +51,14 @@ class Parser
 
         $collection = new Collection();
 
-        foreach($rows as $row) {
+        foreach ($rows as $row) {
+            if (!isset($row['RecordCategory']) || !is_string($row['RecordCategory'])) {
+                throw new \UnexpectedValueException('A Baby Tracker row is missing its record category.');
+            }
+
             $className = 'JordJD\\BabyTrackerDataParser\\BabyRecords\\'.$row['RecordCategory'].'Record';
             if (!class_exists($className)) {
-                throw new \Exception('Unexpected record type found: '.$row['RecordCategory']);
+                throw new \UnexpectedValueException('Unexpected record type found: '.$row['RecordCategory']);
             }
             $collection->push(new $className($row));
         }
